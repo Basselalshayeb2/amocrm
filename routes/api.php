@@ -8,3 +8,5 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 // Webhooks routes
+Route::get('/test', [\App\Http\Controllers\AmoController::class, 'test']);
+Route::post('/webhook', [\App\Http\Controllers\AmoController::class, 'webhook'])->name('amocrm.webhook');
