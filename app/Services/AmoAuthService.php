@@ -57,6 +57,7 @@ class AmoAuthService extends AmoService
 
     public function getCurrentAccessToken(): AmoKeys
     {
+        $this->renewAccessToken();
         return AmoKeys::first();
     }
 
